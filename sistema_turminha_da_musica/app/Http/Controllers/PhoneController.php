@@ -15,18 +15,9 @@ class PhoneController extends Controller
      */
     public function index()
     {
-        //
+        return Phone::all();
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+ 
 
     /**
      * Store a newly created resource in storage.
@@ -36,7 +27,7 @@ class PhoneController extends Controller
      */
     public function store(StorePhoneRequest $request)
     {
-        //
+        return Phone::create($request->all());
     }
 
     /**

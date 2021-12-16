@@ -15,18 +15,10 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        //
+        return Teacher::all();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+    
 
     /**
      * Store a newly created resource in storage.
@@ -36,7 +28,7 @@ class TeacherController extends Controller
      */
     public function store(StoreTeacherRequest $request)
     {
-        //
+        return Teacher::create($request->all());
     }
 
     /**
@@ -47,7 +39,7 @@ class TeacherController extends Controller
      */
     public function show(Teacher $teacher)
     {
-        //
+        return $teacher;
     }
 
     /**

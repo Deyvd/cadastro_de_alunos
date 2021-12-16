@@ -15,18 +15,9 @@ class RoomController extends Controller
      */
     public function index()
     {
-        //
+        return Room::all();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -36,7 +27,7 @@ class RoomController extends Controller
      */
     public function store(StoreRoomRequest $request)
     {
-        //
+        return Room::create($request->all());
     }
 
     /**

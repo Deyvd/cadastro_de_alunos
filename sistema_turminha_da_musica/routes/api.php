@@ -55,15 +55,14 @@ Route::group([
 
 
 Route::apiResource('class-room', ClassRoomController::class);
-Route::apiResource('class-room', ContractController::class);
-Route::apiResource('class-room', ContractPaymentController::class);
-Route::apiResource('class-room', CourseController::class);
-Route::apiResource('class-room', PhoneController::class);
-Route::apiResource('class-room', PlaceController::class);
-Route::apiResource('class-room', ResponsibleController::class);
-Route::apiResource('class-room', RoomController::class);
-Route::apiResource('class-room', StudentController::class);
-Route::apiResource('class-room', StudentHasResponsibleController::class);
-Route::apiResource('class-room', TeacherController::class);
-Route::apiResource('class-room', TeacherHasClassController::class);
-Route::apiResource('class-room', ClassRoomController::class);
+Route::apiResource('contract', ContractController::class);
+Route::apiResource('contract-payment', ContractPaymentController::class);
+Route::apiResource('course', CourseController::class);
+Route::apiResource('phone', PhoneController::class);
+Route::apiResource('place', PlaceController::class);
+Route::apiResource('responsible', ResponsibleController::class);
+Route::apiResource('room', RoomController::class);
+Route::apiResource('student', StudentController::class);
+Route::apiResource('student-has-responsible', StudentHasResponsibleController::class);
+Route::apiResource('teacher', TeacherController::class);
+Route::apiResource('teacher-has-class', TeacherHasClassController::class);

@@ -15,19 +15,10 @@ class ContractController extends Controller
      */
     public function index()
     {
-        //
+        return Contract::all();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
+     
     /**
      * Store a newly created resource in storage.
      *
@@ -36,7 +27,7 @@ class ContractController extends Controller
      */
     public function store(StoreContractRequest $request)
     {
-        //
+        return Contract::create($request->all());
     }
 
     /**

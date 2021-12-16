@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class ContractPayment extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'payment_method',
+        'contract_id',
+        'value',
+        'payed_at',
+        'status',
+
+    ];
 }

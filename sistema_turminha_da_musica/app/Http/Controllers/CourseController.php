@@ -15,19 +15,9 @@ class CourseController extends Controller
      */
     public function index()
     {
-        //
+        return Course::all();
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
+ 
     /**
      * Store a newly created resource in storage.
      *
@@ -36,7 +26,7 @@ class CourseController extends Controller
      */
     public function store(StoreCourseRequest $request)
     {
-        //
+        return Course::create($request->all());
     }
 
     /**

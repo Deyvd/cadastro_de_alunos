@@ -15,17 +15,7 @@ class StudentHasResponsibleController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return StudentHasResponsible::all();
     }
 
     /**
@@ -36,7 +26,7 @@ class StudentHasResponsibleController extends Controller
      */
     public function store(StoreStudentHasResponsibleRequest $request)
     {
-        //
+        return StudentHasResponsible::create($request->all());
     }
 
     /**

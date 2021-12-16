@@ -15,19 +15,10 @@ class ResponsibleController extends Controller
      */
     public function index()
     {
-        //
+        return Responsible::all();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
+     
     /**
      * Store a newly created resource in storage.
      *
@@ -36,7 +27,7 @@ class ResponsibleController extends Controller
      */
     public function store(StoreResponsibleRequest $request)
     {
-        //
+        return Responsible::create($request->all());
     }
 
     /**
