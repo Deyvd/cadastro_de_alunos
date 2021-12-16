@@ -15,4 +15,16 @@ class Responsible extends Model
         'ocupation',
         'phone_id',
     ];
+
+    protected function phone(){
+        return $this->hasOne(Phone::class);
+    }
+
+    protected function studentHasResponsible(){
+        return $this->belongsToMany(StudentHasResponsible::class);
+    }
+
+    protected function contracts(){
+        return $this->belongsToMany(Contract::class);
+    }
 }

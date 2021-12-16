@@ -12,4 +12,12 @@ class StudentHasResponsible extends Model
         'student_id',
         'responsible_id'
     ];
+
+    protected function responsible(){
+        return $this->hasOne(Responsible::class);
+    }
+
+    protected function student(){
+        return $this->hasOne(Student::class);
+    }
 }

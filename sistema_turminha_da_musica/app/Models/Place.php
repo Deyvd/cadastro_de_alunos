@@ -19,4 +19,12 @@ class Place extends Model
         
 
     ];
+
+    protected function classRoom(){
+        return $this->belongsToMany(ClassRoom::class);
+    }
+
+    protected function contracts(){
+        return $this->belongsToMany(Contract::class);
+    }
 }

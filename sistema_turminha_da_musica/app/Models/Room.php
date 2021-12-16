@@ -12,4 +12,12 @@ class Room extends Model
         'name',
         'place_id'
     ];
+    
+    protected function place(){
+        return $this->hasOne(Place::class);
+    }
+
+    protected function classRoom(){
+        return $this->belongsTo(ClassRoom::class);
+    }
 }

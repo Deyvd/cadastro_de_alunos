@@ -27,4 +27,24 @@ class Contract extends Model
         'is_particular',
         'class_room_id',
     ];
+
+    protected function student(){
+        return $this->hasOne(Student::class);
+    }
+
+    protected function responsible(){
+        return $this->hasOne(Responsible::class);
+    }
+
+    protected function place(){
+        return $this->hasOne(Place::class);
+    }
+
+    protected function classRoom(){
+        return $this->hasOne(ClassRoom::class);
+    }
+
+    protected function contractPayment(){
+        return $this->BelongsTo(ContractPayment::class);
+    }
 }

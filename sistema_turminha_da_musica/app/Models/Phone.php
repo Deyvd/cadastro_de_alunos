@@ -13,4 +13,8 @@ class Phone extends Model
         'whatsapp'
 
     ];
+
+    protected function responsible(){
+        return $this->belongsTo(Responsible::class);
+    }
 }

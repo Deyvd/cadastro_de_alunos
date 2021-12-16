@@ -11,4 +11,8 @@ class Teacher extends Model
     protected $fillable = [
         'name',
     ];
+
+    protected function teacher_has_class(){
+        return $this->belongsToMany(TeacherHasClass::class);
+    }
 }

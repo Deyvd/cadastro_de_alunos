@@ -16,4 +16,8 @@ class ContractPayment extends Model
         'status',
 
     ];
+
+    protected function contract(){
+        return $this->hasOne(Contract::class);
+    }
 }

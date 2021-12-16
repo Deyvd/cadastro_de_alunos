@@ -12,4 +12,12 @@ class Student extends Model
         'name',
         'birthday'
     ];
+
+    protected function studentHasResponsibles(){
+        return $this->belongsToMany(StudentHasResponsible::class);
+    }
+
+    protected function contracts(){
+        return $this->belongsToMany(Contract::class);
+    }
 }

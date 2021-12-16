@@ -12,4 +12,12 @@ class TeacherHasClass extends Model
         'teacher_id',
         'class_room_id',
     ];
+
+    protected function teacher(){
+        return $this->hasOne(Teacher::class);
+    }
+
+    protected function classRoom(){
+        return $this->hasOne(ClassRoom::class);
+    }
 }

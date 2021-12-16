@@ -19,4 +19,20 @@ class ClassRoom extends Model
         'room_id',
         'days_of_week',
     ];
+
+    protected function course(){
+        return $this->hasOne(Course::class);
+    }
+
+    protected function room(){
+        return $this->belongsTo(Room::class);
+    }
+
+    protected function teachers(){
+        return $this->belongsToMany(Teacher::class);
+    }
+
+    protected function contracts(){
+        return $this->belongsToMany(Contract::class);
+    }
 }

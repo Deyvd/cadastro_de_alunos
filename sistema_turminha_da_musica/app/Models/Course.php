@@ -13,4 +13,9 @@ class Course extends Model
         
 
     ];
+    
+    protected function classRoom(){
+        return $this->belongsTo(ClassRoom::class);
+    }
 }
+
