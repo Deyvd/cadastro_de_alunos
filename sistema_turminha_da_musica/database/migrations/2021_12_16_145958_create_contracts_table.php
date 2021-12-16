@@ -33,8 +33,8 @@ class CreateContractsTable extends Migration
             $table->unsignedBigInteger('class_room_id');
             $table->timestamps();
 
-            $table->foreign('student_id')->references('id')->on('students');
-            $table->foreign('responsible_id')->references('id')->on('responsibles');
+            $table->foreign('student_id')->references('id')->on('persons');
+            $table->foreign('responsible_id')->references('id')->on('persons');
             $table->foreign('place_id')->references('id')->on('places');
             $table->foreign('class_room_id')->references('id')->on('class_rooms');
         });

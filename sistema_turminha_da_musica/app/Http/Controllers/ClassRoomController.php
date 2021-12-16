@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ClassRoom;
 use App\Http\Requests\StoreClassRoomRequest;
 use App\Http\Requests\UpdateClassRoomRequest;
+use Illuminate\Http\Request;
 
 class ClassRoomController extends Controller
 {
@@ -13,9 +14,19 @@ class ClassRoomController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+
         return ClassRoom::all();
+        // $room = ClassRoom::where('course_id', 'course')->get();
+        // return $room;
+
+        // if($request) {
+        //     $classes = ClassRoom::find('course_id');
+        // }
+        // $classes = ClassRoom::all();
+        // dd($classes);
+        // return $classes;
     }
 
      

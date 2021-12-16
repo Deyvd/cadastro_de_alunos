@@ -23,6 +23,7 @@ class CreateClassRoomsTable extends Migration
             $table->enum('modality', ['o', 'p']);
             $table->unsignedBigInteger('room_id');
             $table->integer('days_of_week');
+            $table->integer('max_students');
             $table->timestamps();
 
             $table->foreign('course_id')->references('id')->on('courses');

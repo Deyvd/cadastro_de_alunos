@@ -18,10 +18,11 @@ class ClassRoom extends Model
         'modality',
         'room_id',
         'days_of_week',
+        'max_students',
     ];
 
     protected function course(){
-        return $this->hasOne(Course::class);
+        return $this->hasMany(Course::class);
     }
 
     protected function room(){
